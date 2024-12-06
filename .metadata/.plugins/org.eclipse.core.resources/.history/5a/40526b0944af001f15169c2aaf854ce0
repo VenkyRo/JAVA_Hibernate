@@ -1,0 +1,39 @@
+
+package com.jlcindia.hibernate;
+
+import java.io.Serializable;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.engine.spi.SharedSessionContractImplementor;
+import org.hibernate.id.IdentifierGenerator;
+
+
+
+
+
+
+
+public class CIDGenerator implements IdentifierGenerator{
+@Override 
+public Serializable generate(SharedSessionContractImplementor sessionImpl, Object obj) throws HibernateException { 
+System.out.println("CIDGenerator-generate()"); 
+String cid="C-001"; 
+try { 
+Session session=(Session)sessionImpl; 
+String HQL="select max(cust.cid) from Customer cust"; 
+String id=session.createQuery(HQL,String.class).uniqueResult(); 
+if(id!=null) { 
+int x=Integer.parseInt(id.substring(2)); 
+x=x+1; 
+if(x<=9) 
+cid="C-00"+x; 
+else if(x<=99) 
+cid="C-0"+x; 
+else if(x<=999) 
+cid="C-"+x; 
+} 
+}catch(Exception ex) { 
+	ex.printStackTrace(); } 
+return cid; 
+} } 

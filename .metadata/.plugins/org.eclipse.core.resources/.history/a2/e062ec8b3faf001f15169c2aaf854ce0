@@ -1,0 +1,32 @@
+
+package com.jlcindia.hibernate;
+
+import java.io.Serializable;
+
+import javax.persistence.Id;
+
+import com.mysql.cj.Session;
+
+public class CIDGenerator {
+	
+	public static Serializable getNextCustomerID(Session session) {
+		
+		System.out.println("Cid generator");
+		String cidString = "C-0001";
+		
+		try {
+			String HQlString ="select max(cust.cid) from Customer cust";
+			
+			String id=session.createQuery(HQlString,String.class).uniqueResult(); 
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		return cidString;
+		
+	}
+
+}

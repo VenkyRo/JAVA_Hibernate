@@ -1,0 +1,18 @@
+
+package com.jlcindia.hibernate;
+
+import javax.persistence.Entity;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "myaccounts1")
+@IdClass(AccountNumber.class)
+public class Account {
+	
+	private int branchCode;
+	
+	private String acctype;
+	
+	private int acc
+}

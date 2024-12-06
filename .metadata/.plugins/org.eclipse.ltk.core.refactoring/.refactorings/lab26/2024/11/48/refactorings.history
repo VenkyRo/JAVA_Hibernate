@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.jlcindia.hibernate.Lab25A&apos; to &apos;Lab26A&apos;&#x0D;&#x0A;- Original project: &apos;lab26&apos;&#x0D;&#x0A;- Original element: &apos;com.jlcindia.hibernate.Lab25A&apos;&#x0D;&#x0A;- Renamed element: &apos;com.jlcindia.hibernate.Lab26A&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Lab25A&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.jlcindia.hibernate{Lab25A.java[Lab25A" matchStrategy="1" name="Lab26A" qualified="false" references="true" similarDeclarations="false" stamp="1732730223022" textual="false" version="1.0"/>
+</session>

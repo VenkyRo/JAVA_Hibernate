@@ -1,0 +1,19 @@
+
+package com.jlcindia.hibernate;
+
+import java.io.Serializable;
+
+import org.hibernate.Session;
+import org.hibernate.id.IdentifierGenerator;
+
+
+
+
+
+
+
+public class CIDGenerator implements IdentifierGenerator {
+	
+
+
+}

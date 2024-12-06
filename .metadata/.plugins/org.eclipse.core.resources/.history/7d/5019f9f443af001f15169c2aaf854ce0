@@ -1,0 +1,27 @@
+
+package com.jlcindia.hibernate;
+
+import java.io.Serializable;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.engine.spi.SharedSessionContractImplementor;
+import org.hibernate.id.IdentifierGenerator;
+
+
+
+
+
+
+
+public class CIDGenerator implements IdentifierGenerator {
+
+	@Override
+	public Serializable generate(SharedSessionContractImplementor sessionContractImplementor) throws HibernateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+
+}

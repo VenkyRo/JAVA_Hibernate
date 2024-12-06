@@ -1,0 +1,38 @@
+
+package com.jlcindia.hibernate;
+
+import java.io.Serializable;
+
+public class AccountNumber  implements Serializable{
+	
+	private int branchCode;
+	private String acctypeString;
+	private int accId;
+	public int getBranchCode() {
+		return branchCode;
+	}
+	public void setBranchCode(int branchCode) {
+		this.branchCode = branchCode;
+	}
+	public String getAcctypeString() {
+		return acctypeString;
+	}
+	public void setAcctypeString(String acctypeString) {
+		this.acctypeString = acctypeString;
+	}
+	public int getAccId() {
+		return accId;
+	}
+	public void setAccId(int accId) {
+		this.accId = accId;
+	}
+	public AccountNumber(int branchCode, String acctypeString, int accId) {
+		super();
+		this.branchCode = branchCode;
+		this.acctypeString = acctypeString;
+		this.accId = accId;
+	}
+	
+	
+
+}

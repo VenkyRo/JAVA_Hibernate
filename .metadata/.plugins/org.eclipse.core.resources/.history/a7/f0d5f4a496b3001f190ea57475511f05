@@ -1,0 +1,69 @@
+package com.jlcindia.hibernate;
+
+import java.util.Iterator;
+import java.util.List;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+
+import org.hibernate.*;
+import org.hibernate.query.Query;
+
+import com.mysql.cj.x.protobuf.MysqlxExpr.Object.ObjectFieldOrBuilder;
+
+
+
+public class Lab37A {
+
+	public static void main(String[] args) {
+		
+		Transaction tx1=null; 
+		Transaction tx2 = null;
+		try { 
+			//Step 1: get the SessionFactory Object. 
+			SessionFactory sessionFactory= HibernateUtil.getSessionFactory(); 
+			//Step 2: Open the Session 
+			Session session1 = sessionFactory.openSession(); 
+			//Step 3: Begin Transaction 
+			tx1 = session1.beginTransaction(); 
+			//Step4: Do Your Ops 
+			
+			System.out.println("Load Fist Time");
+			
+			Customer customer1 = session1.load(Customer.class, 1);
+			System.out.println(customer1);
+			System.out.println("Load Second Time");
+			
+			Customer customer2 = session1.load(Customer.class, 1);
+		
+			//Step 5: End Tx 
+			tx1.commit(); 
+			//Step 6: Close Session 
+			session1.close(); 
+			
+			System.out.println("-------------------------------------------");
+			
+System.out.println("Load Fist Time");
+			
+			Customer customer1 = session1.load(Customer.class, 1);
+			System.out.println(customer1);
+			System.out.println("Load Second Time");
+			
+			Customer customer2 = session1.load(Customer.class, 1);
+		
+			//Step 5: End Tx 
+			tx1.commit(); 
+			//Step 6: Close Session 
+			session1.close(); 
+		} 
+		catch(Exception ex) { 
+		tx1.rollback(); 
+		ex.printStackTrace(); 
+		} 
+
+		
+
+	}
+
+}

@@ -1,0 +1,10 @@
+
+package com.jlcindia.hibernate;
+
+import javax.persistence.Entity;
+
+@Entity
+
+public class Account {
+
+}

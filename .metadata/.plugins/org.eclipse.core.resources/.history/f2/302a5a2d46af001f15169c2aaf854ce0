@@ -1,0 +1,31 @@
+
+package com.jlcindia.hibernate;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "myaccounts1")
+@IdClass(AccountNumber.class)
+public class Account {
+	
+	@Id
+	@Column(name = "branchCode")
+	private int branchCode;
+	
+	
+	private String acctype;
+	
+	private int accId;
+	
+	private Date accOpenDate;
+	
+	private Double balance;
+	
+	private String status;
+}

@@ -1,0 +1,10 @@
+
+package com.jlcindia.hibernate;
+
+import java.io.Serializable;
+
+public class AccountNumber  implements Serializable{
+	
+	private int br
+
+}

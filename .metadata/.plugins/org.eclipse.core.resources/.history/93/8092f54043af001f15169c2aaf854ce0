@@ -1,0 +1,18 @@
+
+package com.jlcindia.hibernate;
+
+import java.io.Serializable;
+
+import org.hibernate.Session;
+
+
+
+
+
+
+
+public class CIDGenerator {
+	
+	public class 
+
+}
